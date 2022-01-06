@@ -1,5 +1,5 @@
 """
-Block comments
+Multiline comments
 """
 
 # Single line comment

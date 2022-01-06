@@ -1,5 +1,7 @@
+package comments
+
 /*
-	Block comments
+	Multiline comments
 */
 
 // single line comment

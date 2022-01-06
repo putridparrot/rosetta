@@ -1,5 +1,5 @@
 =begin
-Block comments
+Multiline comments
 =end
 
 # Single line comment
