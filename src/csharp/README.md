@@ -8,7 +8,7 @@
 dotnet new console --framework net6.0
 ```
 
-We can run this code using 
+We can run this code using (from the folder with your .csproj)
 
 ```
 dotnet run
