@@ -1,4 +1,4 @@
-void main() {
+int main() {
     // character
     char ch = 'a';
     // signed character [-127, 127]
@@ -44,4 +44,6 @@ void main() {
     // arrays
     int arr[3] = { 1, 2, 3 };
     int multi_arr[3][3];
+
+    return 0;
 }

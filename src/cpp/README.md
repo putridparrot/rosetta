@@ -6,11 +6,18 @@ C++ is in many ways the real root of C languages with classes, Java, C# etc.
 
 ### Hello World
 
-I'm using the Visual Studio Dev Prompt and cl.exe to compile C++ but you might prefer to use g++ or clang compilers. Assuming you're following along with cl.exe and you've openend the prompt in the correct folder then run the following for simple single file compilation
+I'm using the Visual Studio Dev Prompt and cl.exe on Windows to compile C++ but you might prefer to use g++ or clang compilers. On Linux I'm using gcc (v9.3.0). Assuming you're following along with cl.exe and you've openend the prompt in the correct folder then run the following for simple single file compilation
 
 ```
+// on Windows
 cl helloWorld.cpp
+// on Linux
+gcc helloWorld.cpp -o helloWorld
+// or better still on Linux
+make helloWorld
 ```
+
+_Note: gcc on Linux requires main to return an int._
 
 As C++ is a compiled language, this command will build an obj file then link that to create an executable which we can then run.
 
