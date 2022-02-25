@@ -34,11 +34,27 @@ Before we get too deep into code, we'll take a look at commenting that code, hen
 
 ### **Basic Types**
 
-All languages have some means for handling different basic types, for example whole number, decimal numbers, characters etc. Again, these are really the core fundamentals of programming in each language. 
+All languages have some means for handling different basic types, for example whole number, decimal numbers, characters etc. Again, these are really the core fundamentals of programming in each language. Some languages include syntax to denote a value has an undefined state. For example, one might declare a value as NULL (or the language equivalent) but not all types can be declared as NULL, hence in these cases special syntax is used to essentially create an unassigned state.
 
 ### **Assigment**
 
-It's not unusal for a langauge to have constants (immutable) assignement (whether dynbamic or commonly at compile time). We'll also need to create variables (mutable) data and maybe even static or globally scoped data. Some languages, such as those which are functional or functiona-first tend to push the developer more towards immutable data types.
+It's not unusal for a langauge to have constants (immutable) assignment (whether dynbamic or commonly at compile time). We'll also need to create variables (mutable) data and maybe even static or globally scoped data. Some languages, such as functional languages tend to push the developer more towards immutable data types. This has benefits with concurrency and general state management but then requires copying to occur a lot or the language needs to support copy on write or the likes to try to reduce memory usage or performance overheads that might come due to deep copying of values.
+
+### **Loops**
+
+Looping is found in many languages, although functional languages tend to prefer recursion instead. For those languages that support loops of one form or another you'll generally find _for_, _while_ and _do...while_ or equivalents such as _repeal...until_. Other looping mechanism such as _foreach_ or _for_ where it handle enumerations or similar.
+
+### **Conditional**
+
+Loop (and recursion) will usually  require a way to end the loop, hence will have some form of conditional statement, i..e loop whilst a statement is true. Like wise we'll generally require ways to execute statements based upon a conditional statement being true or false. The is where _if_ statements come in.
+
+Some languages support conditional statements that can switch depending upon the value or use pattern/type matching to choose the correct branch based upon a given condition.
+
+### **Functions**
+
+Languages will generally have their own libraries of functions, after all we don't want to have to all write our own version of some function that probably every language and user would require. Function syntax often differs between languages but the basic concepts remain much the same...
+
+We need a way to declare a function, to list any arguments or parameters passed into it and potentially a way to return some data. In a functional world we are generally expected to always return something, in many non-functional languages we may declare a _void_ return meaning we don't really return anything.
 
 ### **Idiomatic Style**
 

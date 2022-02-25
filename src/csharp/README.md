@@ -30,8 +30,15 @@ We can run the generated code using (from the folder with your .csproj)
 dotnet run
 ```
 
-
 ### Basic types 
+
+Basic types include numerical types such as _int_, _float_ etc. Nullable (also known as optional) syntax may be applied to values as well, for example
+
+```csharp
+int? i;
+```
+
+Denotes that the integer _i_ may exist without having a value assigned to it.
 
 ### Assignment
 
