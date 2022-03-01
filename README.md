@@ -56,6 +56,16 @@ Languages will generally have their own libraries of functions, after all we don
 
 We need a way to declare a function, to list any arguments or parameters passed into it and potentially a way to return some data. In a functional world we are generally expected to always return something, in many non-functional languages we may declare a _void_ return meaning we don't really return anything.
 
+### **Exception Handling**
+
+In the old days we'd return errors using invalid values or returning types which are analogous to Result types (used in some languages today). Which would be a combination of a value or error value. Exceptions offer a way to propogate errors through the calling heirarchy in such a way as to make the verbose way of returned results and checking at each point whether there's an arror or not. 
+
+### **Generics**
+
+Some languages support the idea of <em>generics</em> which allow us to create functionality without neccesarily known the type the functionality operates against. The most obvious use of generics are in things like homogonous collections. Generics allow us a type safe way of handling such data.
+
+Not all languages support generics and those that do, may handle the implementations of generics in different ways.
+
 ### **Idiomatic Style**
 
 Where possible code will be presented in a style idiomatic to that language. In some cases clear specifications might not exist - for example JavaScript has several sets of standard practises out there - in such situations code will aim to be consistant in a chosen style. Whilst what your code does in the most important thing it's often a give away that you a developer is not conversant in a programming language when they write in a style not commonly used for that language.
