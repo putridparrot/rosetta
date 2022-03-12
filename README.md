@@ -36,6 +36,18 @@ Before we get too deep into code, we'll take a look at commenting that code, hen
 
 All languages have some means for handling different basic types, for example whole number, decimal numbers, characters etc. Again, these are really the core fundamentals of programming in each language. Some languages include syntax to denote a value has an undefined state. For example, one might declare a value as NULL (or the language equivalent) but not all types can be declared as NULL, hence in these cases special syntax is used to essentially create an unassigned state.
 
+### **Nullable/Optional**
+
+Some languages come with the concept of nullable or optional types. Nullables and optionals are really the same thing - a way to denote a value may exist or not exist. For example an optional integer will have the value NULL/null/nil/none (whatever the concept of unassigned is within the given language). When it's assigned a value it can be thought of as have "some" value. Often the concept is an optional variable has some value or none.
+
+C# introduced nullable value types a while back and then nullable reference types more recently. The Optional class exists in Java for similar functionality. Most languages which include such features seem to have settled towards using the syntax of a queston mark after the type to denote an optional, for example
+
+```
+int? optionalInt
+```
+
+Whilst this is used to tell the developer when a type has been assigned, from a compilation or lint step it also allows the compiler/linter to highlight where missing checks exist to ensure that a type has been assigned.
+
 ### **Assigment**
 
 It's not unusal for a langauge to have constants (immutable) assignment (whether dynbamic or commonly at compile time). We'll also need to create variables (mutable) data and maybe even static or globally scoped data. Some languages, such as functional languages tend to push the developer more towards immutable data types. This has benefits with concurrency and general state management but then requires copying to occur a lot or the language needs to support copy on write or the likes to try to reduce memory usage or performance overheads that might come due to deep copying of values.
@@ -50,13 +62,17 @@ Loop (and recursion) will usually  require a way to end the loop, hence will hav
 
 Some languages support conditional statements that can switch depending upon the value or use pattern/type matching to choose the correct branch based upon a given condition.
 
+### **Operators**
+
+The languages we're looking at here are general purpose languages, as such they will contain operators, whether they be arithmetic, bitwise, logical etc. (or all of those).
+
 ### **Functions**
 
 Languages will generally have their own libraries of functions, after all we don't want to have to all write our own version of some function that probably every language and user would require. Function syntax often differs between languages but the basic concepts remain much the same...
 
 We need a way to declare a function, to list any arguments or parameters passed into it and potentially a way to return some data. In a functional world we are generally expected to always return something, in many non-functional languages we may declare a _void_ return meaning we don't really return anything.
 
-### **Exception Handling**
+### **Exceptions and Exception Handling**
 
 In the old days we'd return errors using invalid values or returning types which are analogous to Result types (used in some languages today). Which would be a combination of a value or error value. Exceptions offer a way to propogate errors through the calling heirarchy in such a way as to make the verbose way of returned results and checking at each point whether there's an arror or not. 
 
@@ -69,3 +85,26 @@ Not all languages support generics and those that do, may handle the implementat
 ### **Idiomatic Style**
 
 Where possible code will be presented in a style idiomatic to that language. In some cases clear specifications might not exist - for example JavaScript has several sets of standard practises out there - in such situations code will aim to be consistant in a chosen style. Whilst what your code does in the most important thing it's often a give away that you a developer is not conversant in a programming language when they write in a style not commonly used for that language.
+
+### **Classes/Structures**
+
+Structures (or struct) may exist in non-Object Oriented languages along with Unions and other ways to 
+group data together. In an Object Oriented language, structs tend to have capabilities in line with Classes (class) which is generally the name used of a prototype that object instances are created from.
+
+The way structs and classes are used will usually differ within a language that has both. Often, structures will be value types (passed around as values or copies if you like) whereas classes are often reference types (stored on the heap and passed by reference). However this is not neccesarily a hard and fast rules for all languages.
+
+Not all languages support classes as these are often associated with Object Oriented languages. Functional languages are more likely to support something along the lines of our definition of structs. However functional first languages, such as F# support both.
+
+### **Interfaces/Protocols/Trait**
+
+Interfaces are used in object oriented languages to allow the developer to define the methhods/properties an object is expected to implement. In Swift the equivalent of an interface is known as a protocol, but whilst there may be some differences, the basics are still much the same. Rust has the concept of a trait which again is similar to an interface in concept but as Rust is not an Object Oriented language they ofcourse differ in that the developer does not implement a trait in a class.
+
+Interfaces are a pure abstract type. Some languages support default functionality within an interface, others prefer to offer abstract classes which, some offer both.
+
+An interface not only tells the developer what an object is expected to implement they also allow us to define polymorphism in a more declarative way (ofcourse polymorphism exists without interfaces also). In other words we can write code which understand an interface and need not understand the actual implementation.
+
+### **Libraries/Packages***
+
+This project is primarily aimed at looking at the fundamentals of each language listed but it's inevitable that the reader will wish to use framework or external code/functionality. For example importing a JSON package where a language does not support JSON out of the box.
+
+This usually requires a way to add the package to your application (i.e. download the source or a binary package such as via Maven, nuget, pypi, pub.dev or staight from a source repository such as Github). Some Framework libraries will be pre-installed with the language/compiler and hence are simply accessible by adding some import statement or similar, to your code.
