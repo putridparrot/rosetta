@@ -12,4 +12,8 @@ dart helloWorld.dart
 
 ### Basic types and assignment
 
+Dart supports explicit type declarations as well as type inference. 
+
+Strings can be declared using single, double or triple quotes. Single or double quotes represent a single line string, whereas triple quotes can be used to represent multi-line strings.
+
 ### Comments
