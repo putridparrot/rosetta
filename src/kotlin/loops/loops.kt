@@ -6,7 +6,6 @@ void main() {
     i++;
   }
 
-  i = 1;
   // do...while loops
   do {
     print(i);
