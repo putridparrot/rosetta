@@ -1,4 +1,4 @@
-void main() {
+fun main() {
   var i = 1;
   // while loops
   while (i <= 10) {

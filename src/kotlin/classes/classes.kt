@@ -1,3 +1,4 @@
+// this class uses parameters in it's declaration which become properties
 class Person(var firstName: String, var lastName: String, var age: Int) {
 
     // properties
