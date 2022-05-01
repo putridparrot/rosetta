@@ -16,6 +16,7 @@ class Person {
     this.age = age;
   }
 
+  // these are named constructors
   Person.empty() {}
   Person.withFirstName(this._firstName);
 
