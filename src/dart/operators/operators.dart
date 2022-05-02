@@ -5,7 +5,7 @@ void main() {
   const r3 = 10 * 4; // multiplication
   const r4 = 10 / 4; // division
   const r5 = 10 ~/ 4; // division return integer result
-  const r6 = 10 % 4; // modulo - return remainer after integer division
+  const r6 = 10 % 4; // modulo - return remainder after integer division
   var i = 0;
   i++; // increment
   i--; // decrement
