@@ -1,5 +1,5 @@
 class MyCollection<T> {
-  void add(T item) {
+  add(item: T): void {
     // do something with item
   }
 }
