@@ -9,6 +9,7 @@ Swift is a compiled language running on top of the Object-C runtime on Apple pla
 ### Hello World
 
 ```
+print("Hello World")
 ```
 
 ### Basic types
